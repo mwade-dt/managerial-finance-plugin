@@ -36,7 +36,7 @@ module.exports = {
   ],
   devServer: {
     static: { directory: path.join(__dirname, "dist") },
-    https: true,
+    server: "https",
     port: 3000,
     headers: { "Access-Control-Allow-Origin": "*" }
   }

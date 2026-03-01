@@ -1,0 +1,4 @@
+:32123 {
+    root * ../dist
+    file_server
+}

@@ -21,7 +21,14 @@ if (Test-Path $staging) {
 New-Item -ItemType Directory -Path $staging | Out-Null
 
 Copy-Item -Recurse -Path $dist -Destination (Join-Path $staging "dist")
-Copy-Item -Path (Join-Path $root "manifest.github.xml") -Destination (Join-Path $staging "manifest.xml")
+Copy-Item -Path (Join-Path $root "manifest.offline.xml") -Destination (Join-Path $staging "manifest.offline.xml")
+Copy-Item -Recurse -Path (Join-Path $root "runtime") -Destination (Join-Path $staging "runtime")
+Copy-Item -Path (Join-Path $root "Start Addin.bat") -Destination (Join-Path $staging "Start Addin.bat")
+Copy-Item -Path (Join-Path $root "Stop Addin.bat") -Destination (Join-Path $staging "Stop Addin.bat")
+Copy-Item -Path (Join-Path $root "Start Addin.command") -Destination (Join-Path $staging "Start Addin.command")
+Copy-Item -Path (Join-Path $root "Stop Addin.command") -Destination (Join-Path $staging "Stop Addin.command")
+Copy-Item -Path (Join-Path $root "README.md") -Destination (Join-Path $staging "README.md")
+Copy-Item -Path (Join-Path $root "DEPLOY_AND_SHARE.md") -Destination (Join-Path $staging "DEPLOY_AND_SHARE.md")
 
 Compress-Archive -Path (Join-Path $staging "*") -DestinationPath $zipPath -Force
 Remove-Item -Recurse -Force $staging

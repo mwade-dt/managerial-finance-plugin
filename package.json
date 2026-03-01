@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "webpack serve --mode development --https --port 3000",
+    "start": "webpack serve --mode development --port 3000",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "package": "powershell -ExecutionPolicy Bypass -File scripts/package-release.ps1"
