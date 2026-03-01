@@ -16,7 +16,8 @@ End users should run the add-in from downloaded files only:
    - Windows: `Start Addin.bat`
    - Mac: `Start Addin.command`
 4. End user installs `manifest.offline.xml` in Excel:
-   - Insert -> Get Add-ins -> Upload My Add-in
+   - Windows (Microsoft 365 desktop): Home -> Add-ins -> More Add-ins -> My Add-ins -> Upload My Add-in
+   - Older Excel UI (fallback): Insert -> Get Add-ins -> My Add-ins -> Upload My Add-in
 5. Add-in loads from local loopback URL (`127.0.0.1:32123`).
 
 Stop runtime when done:

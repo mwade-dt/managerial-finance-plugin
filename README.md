@@ -8,10 +8,11 @@ End users do not need GitHub, npm, or terminal commands.
 
 1. Download and unzip the project (or release zip).
 2. Start the local runtime server:
-   - Windows: double-click `Start Addin.bat`
+   - Windows: from the unzipped folder, double-click `Start Addin.bat` (or right-click -> Run)
    - Mac: double-click `Start Addin.command`
 3. Open Excel and install the offline manifest:
-   - Insert -> Get Add-ins -> Upload My Add-in
+   - Windows (Microsoft 365 desktop): Home -> Add-ins -> More Add-ins -> My Add-ins -> Upload My Add-in
+   - If your Excel build shows the older menu: Insert -> Get Add-ins -> My Add-ins -> Upload My Add-in
    - Choose `manifest.offline.xml`
 4. Open the add-in and use calculators.
 5. Optional stop:
