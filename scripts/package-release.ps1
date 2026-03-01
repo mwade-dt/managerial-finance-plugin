@@ -28,6 +28,7 @@ Copy-Item -Path (Join-Path $root "Stop Addin.bat") -Destination (Join-Path $stag
 Copy-Item -Path (Join-Path $root "Start Addin.command") -Destination (Join-Path $staging "Start Addin.command")
 Copy-Item -Path (Join-Path $root "Stop Addin.command") -Destination (Join-Path $staging "Stop Addin.command")
 Copy-Item -Path (Join-Path $root "README.md") -Destination (Join-Path $staging "README.md")
+Copy-Item -Path (Join-Path $root "README.txt") -Destination (Join-Path $staging "README.txt")
 Copy-Item -Path (Join-Path $root "DEPLOY_AND_SHARE.md") -Destination (Join-Path $staging "DEPLOY_AND_SHARE.md")
 
 Compress-Archive -Path (Join-Path $staging "*") -DestinationPath $zipPath -Force
