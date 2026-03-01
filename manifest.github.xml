@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+  <Id>9bdb4db7-65a6-43f3-9f84-6a8829fc20a9</Id>
+  <Version>0.1.0</Version>
+  <ProviderName>Managerial Finance Tools</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Managerial Finance Tools" />
+  <Description DefaultValue="Managerial finance exam calculators with formula and result output." />
+  <IconUrl DefaultValue="https://YOUR_GITHUB_USERNAME.github.io/managerial-finance/assets/icon-32.png" />
+  <SupportUrl DefaultValue="https://YOUR_GITHUB_USERNAME.github.io/managerial-finance/" />
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://YOUR_GITHUB_USERNAME.github.io/managerial-finance/taskpane.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
