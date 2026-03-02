@@ -15,6 +15,7 @@ End users do not need GitHub, npm, or terminal commands.
 4. Open Excel and add the add-in:
    - Home -> Add-ins -> More Add-ins -> My Add-ins -> SHARED FOLDER
    - Select "Managerial Finance Tools (Offline)" and click Add
+   - Do not use "Upload My Add-in" for Windows desktop; many builds do not show it.
 5. Open the add-in and use calculators.
 6. Optional stop/remove:
    - Windows stop server: `Stop Addin.bat`
@@ -25,13 +26,14 @@ End users do not need GitHub, npm, or terminal commands.
 
 - If `SHARED FOLDER` does not appear, close Excel, run `Install Addin.bat` again, then reopen Excel.
 - If the add-in is listed but does not load, make sure `Start Addin.bat` is running first.
+- If you moved the extracted folder, run `Uninstall Addin.bat` and then `Install Addin.bat` from the new location.
 
 ## What is included
 
 - `dist/` prebuilt task pane bundle
 - `runtime/` portable local server binaries and config
 - `manifest.offline.xml` local-loopback manifest
-- one-click launcher scripts for start/stop
+- one-click launcher scripts for install/start/stop/remove (Windows)
 
 ## Topics implemented
 
