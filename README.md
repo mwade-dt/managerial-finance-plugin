@@ -7,17 +7,24 @@ End users do not need GitHub, npm, or terminal commands.
 ## Direct end-user install (downloaded project only)
 
 1. Download and unzip the project (or release zip).
-2. Start the local runtime server:
-   - Windows: from the unzipped folder, double-click `Start Addin.bat` (or right-click -> Run)
+2. Windows only (one-time setup): double-click `Install Addin.bat`.
+   - This registers a trusted add-in catalog for this folder in your user profile.
+3. Start the local runtime server:
+   - Windows: double-click `Start Addin.bat`
    - Mac: double-click `Start Addin.command`
-3. Open Excel and install the offline manifest:
-   - Windows (Microsoft 365 desktop): Home -> Add-ins -> More Add-ins -> My Add-ins -> Upload My Add-in
-   - If your Excel build shows the older menu: Insert -> Get Add-ins -> My Add-ins -> Upload My Add-in
-   - Choose `manifest.offline.xml`
-4. Open the add-in and use calculators.
-5. Optional stop:
-   - Windows: `Stop Addin.bat`
-   - Mac: `Stop Addin.command`
+4. Open Excel and add the add-in:
+   - Home -> Add-ins -> More Add-ins -> My Add-ins -> SHARED FOLDER
+   - Select "Managerial Finance Tools (Offline)" and click Add
+5. Open the add-in and use calculators.
+6. Optional stop/remove:
+   - Windows stop server: `Stop Addin.bat`
+   - Windows remove catalog: `Uninstall Addin.bat`
+   - Mac stop server: `Stop Addin.command`
+
+## Troubleshooting (Windows)
+
+- If `SHARED FOLDER` does not appear, close Excel, run `Install Addin.bat` again, then reopen Excel.
+- If the add-in is listed but does not load, make sure `Start Addin.bat` is running first.
 
 ## What is included
 

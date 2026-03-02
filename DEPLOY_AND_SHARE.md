@@ -12,17 +12,19 @@ End users should run the add-in from downloaded files only:
 
 1. Maintainer creates release zip (`npm run package`).
 2. End user downloads and unzips.
-3. End user starts local runtime:
+3. Windows one-time setup: run `Install Addin.bat` to register the trusted add-in catalog.
+4. End user starts local runtime:
    - Windows: `Start Addin.bat`
    - Mac: `Start Addin.command`
-4. End user installs `manifest.offline.xml` in Excel:
-   - Windows (Microsoft 365 desktop): Home -> Add-ins -> More Add-ins -> My Add-ins -> Upload My Add-in
-   - Older Excel UI (fallback): Insert -> Get Add-ins -> My Add-ins -> Upload My Add-in
-5. Add-in loads from local loopback URL (`127.0.0.1:32123`).
+5. End user adds the add-in in Excel:
+   - Home -> Add-ins -> More Add-ins -> My Add-ins -> SHARED FOLDER
+   - Select "Managerial Finance Tools (Offline)" and click Add
+6. Add-in loads from local loopback URL (`127.0.0.1:32123`).
 
 Stop runtime when done:
 
 - Windows: `Stop Addin.bat`
+- Windows remove catalog: `Uninstall Addin.bat`
 - Mac: `Stop Addin.command`
 
 ## What the package includes
@@ -31,6 +33,7 @@ Stop runtime when done:
 - `runtime/` local Caddy server binaries + config
 - `manifest.offline.xml`
 - start/stop scripts for Windows and Mac
+- install/uninstall catalog scripts for Windows
 - docs
 
 ## Optional hosted flow (secondary)
